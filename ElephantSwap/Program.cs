@@ -45,6 +45,14 @@ namespace ElephantSwap
                 {
                     return;
                 }
+                if(option == ConsoleKey.D5)
+                {
+                    lucinda.SpeakTo(lloyd, "Hi Lloyd");
+                }
+                if(option == ConsoleKey.D6)
+                {
+                    lloyd.SpeakTo(lloyd, " hi ");
+                }
             }
         }
 
@@ -60,6 +68,17 @@ namespace ElephantSwap
         {
             Console.WriteLine("My Name is " + Name);
             Console.WriteLine( "My ears are " + earSize + " inches tall" +'\n');
+        }
+
+        public void HearMessage(Elephant whoSaidIt, string message)
+        {
+            Console.WriteLine(Name + "Heard a Message :");
+            Console.WriteLine(whoSaidIt.Name + " says " + message);
+        }
+
+        public void SpeakTo(Elephant whoToTalkTo, string message)
+        {
+            whoToTalkTo.HearMessage(this, message);
         }
 
     }
