@@ -35,6 +35,16 @@ namespace ElephantSwap
                         "References have swapped");
 
                 }
+                if(option == ConsoleKey.D4)
+                {
+                    lloyd = lucinda;
+                    lloyd.earSize = 33;
+                    lloyd.WhoAmI();
+                }
+                if(option == ConsoleKey.Q)
+                {
+                    return;
+                }
             }
         }
 
